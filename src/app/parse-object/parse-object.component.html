@@ -1,0 +1,26 @@
+<div style="padding: 20px;">
+  foo:
+  <input [(ngModel)]="object.bind.foo" />
+  <br />
+  bar:
+  <input [(ngModel)]="object.bind.bar" />
+  <br />
+  <button (click)="object.save()">Save</button>
+  <button *ngIf="object.dirtyKeys().length" (click)="object.revert()">Revert</button>
+  <div>
+    Result:
+    <br />
+    {{JSON.stringify(object.toJSON())}}
+  </div>
+  <div>
+    Dirty Keys:
+    <br />
+    {{object.dirtyKeys()}}
+  </div>
+    <div *ngIf="object.id">
+      Object saved with id {{ object.id }}
+      <button (click)="createNew()"
+        >Create New</button
+      >
+    </div>
+</div>

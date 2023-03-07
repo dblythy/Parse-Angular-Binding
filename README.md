@@ -1,27 +1,32 @@
-# ParseAngularBinding
+# Parse Angular Binding
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-## Development server
+## About
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The project demos how to use the upcoming Parse JS feature [bind](https://github.com/parse-community/Parse-SDK-JS/pull/1484).
 
-## Code scaffolding
+Binding allows all Parse Objects' properties to be accessed via `object.bind.key`, instead of `object.get('key')`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This allows for convienient two-way binding directly to elements such as inputs with `[(ngModel)]="object.bind.key"`.
 
-## Build
+Configure Parse applicationId and serverURL in [src/parse.ts](src/parse.ts)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Project setup
+```
+npm install
+```
 
-## Running unit tests
+### Compiles and hot-reloads for development
+```
+npm run dev
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Testing on other projects
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To use Bind Notation on your project, install the branch with:
 
-## Further help
+```
+npm i dblythy/Parse-SDK-JS#dot-notation
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

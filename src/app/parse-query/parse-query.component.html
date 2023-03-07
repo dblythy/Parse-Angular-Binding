@@ -1,0 +1,9 @@
+<div *ngFor="let obj of objects;">
+      <b>id: {{obj.id}}</b>
+      <div *ngFor="let field of Object.keys(obj.bind);">
+        <div>
+          {{field}}: {{obj.get(field)}}
+        </div>
+      </div>
+      <button (click)="edit.emit(obj)">Edit</button>
+</div>
